@@ -4,37 +4,19 @@
 using namespace std;
 
 int main () {
-
-    const int screenWidth = 800;
-    const int screenHeight = 600;
-    int ball_x = 100;
-    int ball_y = 100;
-    int ball_speed_x = 5;
-    int ball_speed_y = 5;
-    int ball_radius = 15;
-
-    cout << "Hello World" << endl;
-
-    InitWindow(screenWidth, screenHeight, "My first RAYLIB program!");
+    cout << "starting the game" << endl;
+    const int screen_width = 1280;
+    const int screen_height = 800;
+    InitWindow(screen_width, screen_height, "My Pong Game!");
     SetTargetFPS(60);
 
-    while (WindowShouldClose() == false){
+    while (WindowShouldClose() == false) {
         BeginDrawing();
-        ClearBackground(BLACK);
-        ball_x += ball_speed_x;
-        ball_y += ball_speed_y;
 
-        if(ball_x + ball_radius >= screenWidth  || ball_x - ball_radius <= 0)
-        {
-            ball_speed_x *= -1;
-        }
-
-        if(ball_y + ball_radius >= screenHeight  || ball_y - ball_radius <= 0)
-        {
-            ball_speed_y *= -1;
-        }
-
-        DrawCircle(ball_x,ball_y,ball_radius, WHITE);
+        //Drawing the ball and paddles
+        DrawCircle(screen_width/2, screen_height/2, 20, WHITE);
+        DrawRectangle(10, screen_height/2 - 60, 25, 120, WHITE);
+        DrawRectangle(screen_width - 35, screen_height/2 - 60, 25, 120, WHITE);
         EndDrawing();
     }
 
