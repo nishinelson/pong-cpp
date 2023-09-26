@@ -1,0 +1,18 @@
+{
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/*.o": true,
+		"**/*.exe": true,
+	},
+	"makefile.launchConfigurations": [
+		{
+			"cwd": "/Users/nishinelson/projects/pong/Raylib-CPP-Starter-Template-for-VSCODE",
+			"binaryPath": "/Users/nishinelson/projects/pong/Raylib-CPP-Starter-Template-for-VSCODE/game",
+			"binaryArgs": []
+		}
+	]
+}
