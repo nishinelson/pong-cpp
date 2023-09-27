@@ -27,6 +27,18 @@ class Ball {
 };
 
 class Paddle {
+
+    protected:
+
+    void LimitMovement() {
+        if (y <= 0) {
+            y = 0;
+        }
+        if (y + height >= GetScreenHeight()) {
+            y = GetScreenHeight() - height;
+        }
+    }
+
     public:
     float x, y;
     float width, height;
@@ -43,19 +55,28 @@ class Paddle {
         if (IsKeyDown(KEY_DOWN)) {
             y = y + speed;
         }
+        LimitMovement();
 
-        if (y <= 0) {
-            y = 0;
+    }
+};
+
+class CpuPaddle: public Paddle {
+    public:
+    void Update(int ball_y) {
+        if (y + height/2 > ball_y) {
+            y = y - speed;
         }
-        if (y + height >= GetScreenHeight()) {
-            y = GetScreenHeight() - height;
+        if (y + height/2 <= ball_y) {
+            y = y + speed;
         }
 
+        LimitMovement();
     }
 };
 
 Ball ball;
 Paddle player;
+CpuPaddle cpu;
 
 int main () {
     cout << "starting the game" << endl;
@@ -76,18 +97,34 @@ int main () {
     player.y = screen_height/2 - player.height/2;
     player.speed = 6;
 
+    cpu.height = 120;
+    cpu.width = 25;
+    cpu.x = 10;
+    cpu.y = screen_height/2 - cpu.height/2;
+    cpu.speed = 6;
+
     while (WindowShouldClose() == false) {
         BeginDrawing();
 
         //Updating
         ball.Update();
         player.Update();
+        cpu.Update(ball.y);
+
+        //Checking for paddle collisions
+        if (CheckCollisionCircleRec(Vector2{ball.x, ball.y}, ball.radius, Rectangle{player.x, player.y, player.width, player.height})) {
+            ball.speed_x *= -1;
+        }
+
+        if (CheckCollisionCircleRec(Vector2{ball.x, ball.y}, ball.radius, Rectangle{cpu.x, cpu.y, cpu.width, cpu.height})) {
+            ball.speed_x *= -1;
+        }
 
         //Drawing the ball, paddles, and divider
         ClearBackground(BLACK);
         DrawLine(screen_width/2, 0, screen_width/2, screen_height, WHITE);
         ball.Draw();
-        DrawRectangle(10, screen_height/2 - 60, 25, 120, WHITE);
+        cpu.Draw();
         player.Draw();
 
         EndDrawing();
