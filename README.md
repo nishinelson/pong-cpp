@@ -1,6 +1,8 @@
 # Pong clone
 
-Welcome to the Pong Clone project! This project is a result of following the "Pong Game with C++ and Raylib" tutorial. In this Pong clone, you can experience the classic and addictive gameplay where you control the right paddle, while the computer controls the left one. <a href="https://www.youtube.com/watch?v=PaAcVk5jUd8">Video Tutorial on YouTube</a> <a href="https://github.com/educ8s/Raylib-CPP-Starter-Template-for-VSCODE">Starter template github</a>
+Welcome to the Pong Clone project! This project is a result of following the "Pong Game with C++ and Raylib" tutorial. In this Pong clone, you can experience the classic and addictive gameplay where you control the right paddle, while the computer controls the left one.
+<a href="https://www.youtube.com/watch?v=PaAcVk5jUd8">Video Tutorial on YouTube</a> 
+<a href="https://github.com/educ8s/Raylib-CPP-Starter-Template-for-VSCODE">Starter template github</a>
 
 # Project Overview
 
