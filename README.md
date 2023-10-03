@@ -1,28 +1,11 @@
-# Raylib C++ Starter Template
+# Pong clone
 
-Raylib C++ Starter Template for Visual Studio Code on Windows.
+Welcome to the Pong Clone project! This project is a result of following the "Pong Game with C++ and Raylib" tutorial. In this Pong clone, you can experience the classic and addictive gameplay where you control the right paddle, while the computer controls the left one. <a href="https://www.youtube.com/watch?v=PaAcVk5jUd8">Video Tutorial on YouTube</a> <a href="https://github.com/educ8s/Raylib-CPP-Starter-Template-for-VSCODE">Starter template github</a>
 
-This demo project contains a bouncing ball raylib example program.
+# Project Overview
 
-It works with raylib version 4.5.
-Tested on both Windows 10 and Windows 11.
+This Pong clone has been developed using C++ and the Raylib library, following the instructions outlined in the tutorial. Things start by creating a simple black and white version of Pong, much like the original game from 1973. By the end of the tutorial, I add color to make the Pong clone visually appealing and engaging.
 
-# Video Tutorial
+# Learning and Building
 
-<p align="center">
-  <img src="preview.jpg" alt="" width="800">
-</p>
-
-<p align="center">
-🎥 <a href="https://www.youtube.com/watch?v=PaAcVk5jUd8">Video Tutorial on YouTube</a>
-</p>
-
-<br>
-<br>
-<p align="center">
-| 📺 <a href="https://www.youtube.com/channel/UC3ivOTE5EgpmF2DHLBmWIWg">My YouTube Channel</a>
-| 🌍 <a href="http://www.educ8s.tv">My Website</a> | <br>
-</p>
-
-# pong-cpp
-# pong-cpp
+By creating this Pong clone, I've gained valuable skills in game development. I've learned how to handle movement, user input, collision detection, scoring systems, and even AI opponents. These skills serve as a strong foundation for developing other games in the future. 
